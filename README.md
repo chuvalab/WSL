@@ -15,4 +15,6 @@ In the case WSL is already present, just intall Ubuntu with:
 
 wsl --install -d Ubuntu-24.04
 
+wsl --set-default-version 2
+
 ø
