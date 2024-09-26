@@ -1,8 +1,11 @@
 # WSL
-How to install and use Windows Subsystem for Linux (WSL)
+In this document instructions are offered on how to install and use Windows Subsystem for Linux (WSL) on a Windows 10 machine. User is assumed to have administrative rights
+
+## What is WSL
+Windows Subsystem for Linux (WSL) is a feature of Microsoft Windows that allows developers to run a Linux environment without the need for a separate virtual machine or dual booting
 
 ## Why use WSL
-...
+It is often the case that software is either exclusively available on Linux platforms and not windows or that installing it on windows is difficult or imposible. 
 
 ## How to install WSL
 You can start by following this online guide from Microsoft: https://learn.microsoft.com/en-us/windows/wsl/install In short, you need administrative rights on your windows machine and then run a couple of commands using Powershell.
