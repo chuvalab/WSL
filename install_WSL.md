@@ -10,6 +10,8 @@ It is often the case that software is either exclusively available on Linux plat
 ## WSL1 vs WSL2
 There are two version of WSL, 1 and 2. Version 2 is generaly prefered and is the one we will use further down this guide. You can read more on their comparison [here](https://learn.microsoft.com/en-us/windows/wsl/compare-versions).
 
+In short, WSL2 is expected to work as a native Linux installation, while some issues might occur when using WSL1
+
 ## How to install WSL
 You can start by following this online guide from Microsoft: https://learn.microsoft.com/en-us/windows/wsl/install In short, you need administrative rights on your windows machine and then run a couple of commands using Powershell.
 
@@ -40,19 +42,21 @@ This should just install Ubuntu. You can confirm successful installation  by typ
 wsl -l -v
 ```
 
-If you get something similar to the following, you were successful!
+If you get back something similar to the following, you were successful!
 ```
 PS H:\> wsl -l -v
   NAME            STATE           VERSION
 * Ubuntu-24.04    Running         2
 ``` 
 
+## Open Ubuntu terminal
+Now you should be able to open a terminal (the command line) that runs Ubuntu. Just search for 'Ubuntu' at your Windows start menu and click on it. You will see the familiar command line prompt. 
 
-## Open 
+If you have never been exposed to a terminal, it might be a good idea to go through [this list of commands](https://phoenixnap.com/kb/bash-commands) for [bash](https://phoenixnap.com/kb/what-is-bash)
+
+## Confirm network availabilty
 
 ## Fix possible internet connection issues
-
-
 `sudo vim /etc/resolv.conf`
 
 ```
