@@ -57,7 +57,7 @@ After installing, initialize your newly-installed Miniconda. The following comma
 From: https://docs.anaconda.com/miniconda/
 
 ### Install a more convenient terminal
-Open Powershell and type: 
+[Windows terminal](https://learn.microsoft.com/en-us/windows/terminal/) is a host application for the command line shells, like Powershell and bash we have just install via WSL. You can install it using windows store, or through Powershell. Open Powershell and type: 
 ```
 winget install --id Microsoft.WindowsTerminal -e
 ```
