@@ -56,5 +56,9 @@ After installing, initialize your newly-installed Miniconda. The following comma
 ``` 
 From: https://docs.anaconda.com/miniconda/
 
-
+### Install a more convenient terminal
+Open Powershell and type: 
+```
+winget install --id Microsoft.WindowsTerminal -e
+```
 
