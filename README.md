@@ -17,4 +17,44 @@ wsl --install -d Ubuntu-24.04
 
 wsl --set-default-version 2
 
-ø
+### Fix possible internet connection issues
+
+`sudo vim /etc/resolv.conf`
+
+```
+nameserver 10.14.4.44
+nameserver 10.13.17.13
+nameserver 1.1.1.1
+
+search lumcnet.prod.intern prod.intern vpn.lumcnet.prod.intern
+```
+
+### Install pip
+```
+sudo apt-get update
+```
+
+```
+sudo apt install python3-pip
+```
+
+### Install miniconda
+Explain role of conda
+
+#### Commands to intall conda
+These four commands download the latest 64-bit version of the Linux installer, rename it to a shorter file name, silently install, and then delete the installer:
+```
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm ~/miniconda3/miniconda.sh
+```
+
+After installing, initialize your newly-installed Miniconda. The following commands initialize for bash shell:
+```
+~/miniconda3/bin/conda init bash
+``` 
+From: https://docs.anaconda.com/miniconda/
+
+
+
