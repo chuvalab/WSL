@@ -1,5 +1,5 @@
-# WSL
-In this document instructions are offered on how to install and use Windows Subsystem for Linux (WSL) on a Windows 10 machine. User is assumed to have administrative rights
+# Windows Subsystem for Linux
+In this document instructions are offered on how to install and use Windows Subsystem for Linux (WSL) on a Windows 10 machine. User is assumed to have an account with administrative rights
 
 ## What is WSL
 Windows Subsystem for Linux (WSL) is a feature of Microsoft Windows that allows developers to run a Linux environment without the need for a separate virtual machine or dual booting
@@ -7,20 +7,51 @@ Windows Subsystem for Linux (WSL) is a feature of Microsoft Windows that allows 
 ## Why use WSL
 It is often the case that software is either exclusively available on Linux platforms and not windows or that installing it on windows is difficult or imposible. 
 
+## WSL1 vs WSL2
+There are two version of WSL, 1 and 2. Version 2 is generaly prefered and is the one we will use further down this guide. You can read more on their comparison [here](https://learn.microsoft.com/en-us/windows/wsl/compare-versions).
+
 ## How to install WSL
 You can start by following this online guide from Microsoft: https://learn.microsoft.com/en-us/windows/wsl/install In short, you need administrative rights on your windows machine and then run a couple of commands using Powershell.
 
-First check whether WSL is installed. Run wsl --install. If WSL is not already installed, instalation process will start and Ubuntu, the default Linux distribution, will be installed. Otherwise you will see the help text of WSL command printed.
+First check whether WSL is installed. In powershell run: 
+```
+wsl --install
+```
 
-WSL2: https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-3---enable-virtual-machine-feature
+If WSL is not already installed, instalation process will start and Ubuntu, the default Linux distribution, will be installed. Otherwise you will see the help text of WSL command printed.
 
-In the case WSL is already present, just intall Ubuntu with: 
+As already mentioned, we will install WSL2. Set the version with: 
 
-wsl --install -d Ubuntu-24.04
-
+```
 wsl --set-default-version 2
+```
 
-### Fix possible internet connection issues
+You may need to manually install WSL. [This link](WSL2: https://learn.microsoft.com/en-us/windows/wsl/install-manual) can offer some insights
+
+Given WSL is already present, you can install the currenlty (September 2024) latest Ubuntu version with: 
+
+```
+wsl --install -d Ubuntu-24.04
+```
+
+This should just install Ubuntu. You can confirm successful installation  by typing in Powershell the following:
+
+```
+wsl -l -v
+```
+
+If you get something similar to the following, you were successful!
+```
+PS H:\> wsl -l -v
+  NAME            STATE           VERSION
+* Ubuntu-24.04    Running         2
+``` 
+
+
+## Open 
+
+## Fix possible internet connection issues
+
 
 `sudo vim /etc/resolv.conf`
 
